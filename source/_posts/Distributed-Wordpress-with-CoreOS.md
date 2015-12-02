@@ -1,6 +1,11 @@
 title: Distributed Wordpress with CoreOS
 date: 2015-12-02 12:26:30
-tags: coreos wordpress docker vulcand
+tags:
+ - coreos
+ - wordpress
+ - docker
+ - vulcand
+category: OS
 ---
 
 [CoreOS](http://coreos.com) can seem daunting at first. This tutorial is built to encourage you in your journey and to demonstrate the power of this minimalistic operating system.

@@ -1,5 +1,5 @@
 # date format displayed everywhere in the blog
-date_format: "MMM DD, YYYY"
+date_format: "DD MMM YYYY"
 
 global:
     home: "Home"
@@ -44,6 +44,6 @@ post:
 
 author:
     # Your biography in english (Markdown and HTML supported)
-    bio: ""
+    bio: "Experienced technical leader, architect and ops-focused developer."
     # Your job in english
-    job: ""
+    job: "Head of Technology & Operations"
