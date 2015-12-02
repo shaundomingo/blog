@@ -4,8 +4,8 @@
 
 # Site
 title: Distributed Reality
-subtitle: A blog about my experiences with 
-description: Sharing my learnings about different systems, languages and more.
+subtitle: A blog about my experiences with software, distributed systems / solutions.
+description: A blog about my experiences with software, distributed systems / solutions.
 author: Shaun Domingo
 language: en
 timezone: Australia/Sydney
@@ -68,4 +68,10 @@ theme: tranquilpeak
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: rsync
+  host: instantiatesolutions.com
+  port: 22
+  user: deploy
+  root: /var/www/blog
+  verbose: false
+  ignore_errors: false
