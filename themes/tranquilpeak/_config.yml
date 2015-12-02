@@ -47,17 +47,21 @@ sidebar:
             title: global.archives
             url: /all-archives
             icon: archive
-        search:
-            title: global.search
-            url: /#search
-            icon: search
-            # `st-search-show-outputs` classes are used to open swiftype search window
-            class: st-search-show-outputs
+        # search:
+        #     title: global.search
+        #     url: /#search
+        #     icon: search
+        #     # `st-search-show-outputs` classes are used to open swiftype search window
+        #     class: st-search-show-outputs
         about:
             title: global.about
             url: /#about
             icon: question
     author_links:
+        twitter:
+            title: sdomsta
+            url: https://twitter.com/sdomsta
+            icon: twitter
         github:
             title: shaundomingo
             url: https://github.com/shaundomingo
@@ -66,10 +70,6 @@ sidebar:
         #     title: global.stack_overflow
         #     url: http://stackoverflow.com/users
         #     icon: stack-overflow
-        # twitter:
-        #     title: global.twitter
-        #     url: https://twitter.com/
-        #     icon: twitter
         # facebook:
         #     title: global.facebook
         #     url: https://facebook.com/
