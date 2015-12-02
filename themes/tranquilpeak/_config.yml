@@ -163,6 +163,10 @@ archive_pagination: true
 category_pagination: true
 tag_pagination: true
 
+feed:
+    type: atom
+    path: atom.xml
+    limit: 20
 
 # Integrated services
 # Your Disqus shortname
