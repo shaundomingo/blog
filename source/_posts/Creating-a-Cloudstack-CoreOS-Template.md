@@ -25,7 +25,7 @@ If you want to build a template from the latest (or particular) alpha, beta or s
 * Once the VM is created, navigate to the instance and click to view the console
 * Install CoreOS onto xvda:
   * sudo coreos-install -d /dev/xvda -C stable -o cloudstack
-  ![Image of Instance Console installing CoreOS](images/installing-coreos-to-disk-xenserver.png)
+  ![Image of Instance Console installing CoreOS](/images/installing-coreos-to-disk-xenserver.png)
 * Stop the VM and template.
   * Take a snapshot of your instance's ROOT Storage volume
   * Once the snapshot is complete, create a template from the snapshot, ensuring the template's OS Type is set to 'Other 64-bit'
