@@ -78,10 +78,10 @@ sidebar:
         #     title: global.google_plus
         #     url: https://plus.google.com/
         #     icon: google-plus
-        # linked_in:
-        #     title: global.linkedin
-        #     url: https://www.linkedin.com/profile/
-        #     icon: linkedin
+        linked_in:
+            title: shaundomingo
+            url: https://au.linkedin.com/in/shaundomingo
+            icon: linkedin
         # mail:
         #     title: global.mail
         #     url: mailto:
