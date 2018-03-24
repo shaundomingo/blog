@@ -20,7 +20,7 @@ Containers take the guess work out of deploying applications. Containers run bas
 
 There are a couple of types of containers, CoreOS’ [rkt](https://coreos.com/rkt/docs/latest/) (CoreOS now acquired by RedHat) and the most popular option, [Docker](https://www.docker.com).
 
-So who’s the target audience here? The truth is, everyone. The power of containers is truly build once, run anywhere. If you’re running Docker, that’s anywhere there is a Docker daemon with access to dependent build images. The old developer mantra "but it works on my machine!"" should now actually be verifiable, if it works locally it will work in every single place that container image has been deployed.
+So who’s the target audience here? The truth is, everyone. The power of containers is truly build once, run anywhere. If you’re running Docker, that’s anywhere there is a Docker daemon with access to dependent build images. The old developer mantra "but it works on my machine!" should now actually be true ... if it works locally it will work in every single place that container image has been deployed.
 
 Containers are critical in the deployment of automated continuous integration workflows. They ensure consistency between environments, ensure workloads fire up fast and provide us with higher density across our compute and storage resources.
 
