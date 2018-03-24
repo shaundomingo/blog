@@ -18,7 +18,7 @@ With containers you achieve greater density because the bloat that comes from in
 
 Containers take the guess work out of deploying applications. [insert MakeAGIF.com gif here] Containers run based on images defined by ... you. If you are a developer or engineer, you construct a descriptor that declares what a container image should look like. In the instance of Docker, that’s a Dockerfile. That container is typically based on some other container where most of the heavy lifting has been done for you. As you add instructions to the descriptor, a layered filesystem stores the files that correspond to that instruction and records the diff between itself and the previous instruction, allowing you to uniquely address any layer across the persisted container image history.
 
-There are a couple of types of containers, CoreOS’ rkt and the most popular preference, Docker.
+There are a couple of types of containers, CoreOS’ rkt (CoreOS now acquired by RedHat) and the most popular preference, Docker.
 
 So who’s the target audience here? The truth is, everyone. The power of containers is truly build once, run anywhere. If you’re running Docker, that’s anywhere there is a Docker daemon with access to dependent build images. The old developer mantra "but it works on my machine!"" should now actually be verifiable, if it works locally it will work in every single place that container image has been deployed.
 
@@ -123,7 +123,7 @@ As you can see there are non-tech considerations to think through also ... how w
 
 ## 10 years of application deployment has taught us a lot.
 
-![10 years of Application Deployment](/images/10YearsOfAppDeploymentHastaughtUsMuch.png)
+![10 years of Application Deployment](/images/10YearsOfAppDeploymentHasTaughtUsMuch.png)
 
 We’ve come a long way in 10 years. We’ve established that virtualisation is a fundamental building block now, and into the future. It’s not going away. However, the way we leverage that building block will. A lot. Consider Function-as-a-Service and the additional delivery power that provides.
 
