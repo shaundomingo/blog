@@ -9,9 +9,12 @@ tags:
 
 _Disclaimer: The contents of this post were first delivered by me in a talk for [Macquarie Cloud Services](https://macquariecloudservices.com) at VMWare vForum Sydney in November 2017._
 
+![Shaun Domingo at vForum Sydney in November 2017 for Macquarie Cloud Services](/images/ShaunDomingo-vForum-2017-Evolution-Of-Shipping-Cropped.jpg)
+
 In 2001 VMWare launched the first commercial server virtualisation products VMWare GSX and ESX which paved the way for the standardisation of virtualisation in every enterprise across the globe. Virtualisation became all pervasive, and by the beginning of the public cloud era the perception was if you weren’t virtualising your data centre you were missing significant cost and efficiency benefits.
 
 Fast forward 17 years and we’re still on the search for cost savings and greater scalability. And why wouldn’t we? Virtualisation is great however it hasn’t allowed us to fully utilise our compute resources.
+
 Containers provide a solution to that issue. Containers are light-weight, standalone, portable units. Think of them as isolated application processes running in user space. Containers should only package the code and application dependencies required to run that process ... nothing more.
 
 With containers you achieve greater density because the bloat that comes from installing and running an operating system in line with your application is removed. Instead, containers share the host’s operating system kernel, start instantly and overall use less compute and storage.
