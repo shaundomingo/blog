@@ -4,8 +4,8 @@
 
 # Site
 title: Shaun Domingo - Distributed Reality
-subtitle: A blog about my experiences with software, distributed systems / solutions.
-description: A blog about my experiences with software, distributed systems / solutions.
+subtitle: A blog about my experiences with software, distributed systems and solutions.
+description: A blog about my experiences with software, distributed systems and solutions.
 author: Shaun Domingo
 language: en
 timezone: Australia/Sydney
@@ -41,7 +41,7 @@ highlight:
   enable: true
   line_number: true
   auto_detect: true
-  tab_replace:
+  tab_replace: true
 
 # Category & Tag
 default_category: uncategorized
