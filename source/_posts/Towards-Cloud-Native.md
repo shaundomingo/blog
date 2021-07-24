@@ -37,6 +37,6 @@ Fast forward to the 2020’s and many challenges have blueprinted solutions but 
 
 That aside, there continue to be millions of applications running as monoliths, bucking the hype and trend. As many businesses have found, it's okay to rely on simple structured code broken into domain-specific engines. As teams scale in size or different teams take on responsibility for different functional domains, distributed, hetrogeneous services begin to make sense. A reasonable number of supportable, maintainable, traceable services. Interface contracts in the form of RESTful APIs glue subsystems together and the testability of those integrations paramount.
 
-In the 2020s, the al-a-carte of public cloud is incredibly powerful. However, part of growing and developing a software team today is taming the beast that is cloud and choosing what makes sense.
+In the 2020s, the al-a-carte of public cloud is incredibly powerful. However, part of growing and developing a software team today is taming the beast that is cloud and making pragmatic choices.
 
 When we focus on customer outcomes, technology choices follow suit.
