@@ -1,32 +1,56 @@
-<% var rPhoto = /([\w:\-\/._#]+) *(["|'](.+)["|'])*/; %>
-<% if ((photos) && (photos.length)) { %>
-    <% var imageGalleryClass; %>
-    <% if (photos.length > 2) { %>
-        <% imageGalleryClass = 'image-gallery-photos--thumbnail' %>
-    <% } %>
+<%
+ const GALLERY_IMAGES_DISPLAYED_LIMIT = 3
+ %>
+<% if (theme.image_gallery &&
+    ((post.gallery && post.gallery.length) || (post.photos && post.photos.length))) { %>
+    <%
+        var photos = post.gallery || post.photos;
+        var imageGalleryClass;
+        // change style of the gallery
+        if (photos.length > 2) {
+            imageGalleryClass = 'image-gallery-photos--thumbnail';
+        }
+    %>
     <div class="image-gallery">
         <div class="image-gallery-metabar">
-            <span><%=  'Gallery : ' + photos.length + ' images' %></span>
+            <span><%= __('post.gallery')  + ': ' + _p('post.image', photos.length) %></span>
         </div>
         <div class="image-gallery-photos <%= imageGalleryClass %>">
-            <% photos.forEach(function(photo) { %>
-                    <% var match = photo.match(rPhoto); %>
-                    <% var photoUrl = match[1]; %>
-                    <% var photoTitle = match[3] || ""; %>
-                <% if (photoUrl.indexOf('://') >= 0) { %>
-                    <%  photoUrl = photoUrl; %>
-                    <% if (!/.+\.[a-zA-Z0-9]{3,4}$/.test(photoUrl)) { %>
-                        <%  photoUrl += "#.jpg"; %>
+            <% photos.forEach(function(photo, photoIndex) { %>
+            <%
+                var rPhoto = /([\w:\-\/._#?=]+)(?:\s+([\w:\-\/._#?=]+))*(?:\s*["|'](.+)["|'])*/;
+                var match = photo.match(rPhoto);
+                photo = {
+                    title: match[3] || '',
+                    original: resolve_asset_url(post.path, match[1])
+                };
+                if (match[2]) {
+                    photo.thumbnail = resolve_asset_url(post.path, match[2]);
+                }
+                /* add anchor otherwise FancyBox doesn't recognize the image
+                if there is no extension at the end */
+                if (!/.+\.[a-zA-Z0-9]{3,4}$/.test(photo.original)) {
+                    photo.original += "#.jpg";
+                }
+            %>
+            <div class="photo-box">
+                <a
+                    class="photo-box-inner fancybox"
+                    data-fancybox="<%= 'gallery-' + post._id %>"
+                    data-caption="<%= photo.title %>"
+                    title="<%= photo.title %>"
+                    href="<%= (photo.original || photo.thumbnail) %>"
+                    aria-label="<% __('global.zoom_in_on_picture') %>"
+                >
+                    <% if (photoIndex < GALLERY_IMAGES_DISPLAYED_LIMIT) {%>
+
+                        <img
+                                class="photo" src="<%= (photo.thumbnail || photo.original) %>"
+                        >
                     <% } %>
-                <% } else { %>
-                    <% photoUrl = url_for(post.path.replace('.html', '/') + photo); %>
-                <% } %>
-                <div class="photo-box">
-                    <a class="photo-box-inner fancybox" rel="fancybox-thumb" data-fancybox-group="<%= 'gallery-' + post.id %>" title="<%= photoTitle %>" href="<%= photoUrl %>">
-                        <img class="photo" src="<%= photoUrl %>" itemprop="image">
-                    </a>
-                </div>
-            <% }); %>
+                </a>
+            </div>
+            <% }) %>
         </div>
     </div>
 <% } %>

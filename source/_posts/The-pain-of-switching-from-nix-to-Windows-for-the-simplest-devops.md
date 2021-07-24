@@ -3,6 +3,7 @@ date: 2016-05-29 21:38:32
 tags:
  - windows
  - devops
+excerpt: Back in 2016, switching from *nix to Windows for simple DevOps was hard.
 ---
 
 ## Scene setting

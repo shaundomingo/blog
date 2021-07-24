@@ -6,6 +6,7 @@ tags:
  - docker
  - vulcand
 category: OS
+excerpt: A breakdown of how distributed wordpress could be deployed to CoreOS back in 2015.
 ---
 
 [CoreOS](http://coreos.com) can seem daunting at first. This tutorial is built to encourage you in your journey and to demonstrate the power of this minimalistic operating system.

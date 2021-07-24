@@ -5,6 +5,7 @@ tags:
  - paas
  - platform
 category: PaaS
+excerpt: A summary of my experience building and maintaining a public cloud PaaS for customers using chef.
 ---
 
 Over the last four years I have been fortunate to be part of a cloud computing company that's thrown the kitchen sink at *cloud* innovation. For us the differentiator was making it crazy easy to deploy and maintain an app. This article is a personal reflection on the consideration and use of Chef in a Platform-as-a-Service (PaaS) to which I was a key contributor.

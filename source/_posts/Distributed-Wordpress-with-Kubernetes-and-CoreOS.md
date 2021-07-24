@@ -6,6 +6,7 @@ tags:
   - wordpress
   - virtualbox
   - vagrant
+excerpt: An older exploration (from 2016) of what it took to get wordpress running in Kubernetes and CoreOS with help from VirtualBox and Vagrant.
 ---
 
 In a previous post I unearthed how I put together a [distributed wordpress cluster running in a multi-node CoreOS cluster](Distributed-Wordpress-with-CoreOS).

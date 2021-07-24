@@ -4,7 +4,7 @@
 
     // Generate and insert table of contents in post content
     if ((/<!--(\s*)[t|T][o|O][c|C](\s*)-->/).test(postContent)) {
-        if (__('post.toc_title')) {
+        if (__('post.toc')) {
             tableOfContents = '<h1 id=\"table-of-contents\">' + __('post.toc') + '</h1>';
         } else {
             tableOfContents = '<span id="table-of-contents"></span>';
@@ -20,19 +20,17 @@
     postContent = postContent.replace(/<!-- ?endcontent ?-->/g, '</div>')
                                .replace(/<!-- ?content ?-->/g, '<div class="main-content-wrap">');
 %>
-<article class="post" itemscope itemType="http://schema.org/BlogPosting">
+<article class="post">
     <% if (post.coverCaption) { %>
         <span class="post-header-cover-caption caption"><%= post.coverCaption %></span>
     <% } %>
     <% if (!post.coverImage || post.coverMeta === 'out') { %>
         <%- partial('post/header')%>
     <% } %>
-    <div class="post-content markdown" itemprop="articleBody">
+    <div class="post-content markdown">
         <div class="main-content-wrap">
             <%- postContent %>
-            <% if (theme.image_gallery) { %>
-                <%- partial('post/gallery', {photos: post.photos})%>
-            <% } %>
+            <%- partial('post/gallery') %>
         </div>
     </div>
     <div id="post-footer" class="post-footer main-content-wrap">
@@ -42,9 +40,17 @@
                 <%- partial('post/tag', {tags: post.tags})%>
             </div>
         <% } %>
-        <%- partial('post/actions', {postContent: postContent}) %>
-        <% if (post.comments && theme.disqus_shortname) { %>
-            <%- partial('post/disqus') %>
+        <% if (post.actions === undefined || post.actions) { %>
+            <%- partial('post/actions', {postContent: postContent}) %>
+        <% } %>
+        <% if (post.comments) { %>
+            <% if (theme.disqus_shortname) { %>
+                <%- partial('post/disqus') %>
+            <% } else if (theme.gitment.enable) { %>
+                <%- partial('post/gitment') %>
+            <% } else if (theme.gitalk.enable) { %>
+                <%- partial('post/gitalk') %>
+            <% } %>
         <% } %>
     </div>
 </article>

@@ -5,6 +5,7 @@ tags:
   - docker
   - kubernetes
   - shipping
+excerpt: A writeup of how application deployment has changed for the better through containerisation with parallels to the shipping industry.
 ---
 
 _Disclaimer: The contents of this post were first delivered by me in a talk for [Macquarie Cloud Services](https://macquariecloudservices.com) at VMWare vForum Sydney in November 2017._

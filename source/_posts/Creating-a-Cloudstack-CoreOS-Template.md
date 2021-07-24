@@ -5,6 +5,7 @@ tags:
  - cloudstack
  - iaas
 category: OS
+excerpt: An article reflecting on the process of deploying CoreOS on Cloudstack and XenServer, back in 2015.
 ---
 
 You have a couple of choices when it comes to using CoreOS on Cloudstack and XenServer. You can always [follow the CoreOS tutorial](https://coreos.com/os/docs/latest/booting-on-cloudstack.html) which gives you the simplest way to get going.
