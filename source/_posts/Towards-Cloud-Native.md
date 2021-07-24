@@ -23,7 +23,7 @@ Meanwhile containers, with thanks to Docker’s developer-friendly interface wer
 
 ## DevOps and SRE
 
-But building repeatable, maintainable environments was hard. The toughest challenge? The federation of dev and ops knowledge. Pushing development teams to think beyond one-off batch scripts, deploying directly from their IDE, and app and infra security. The SRE movement transitioned developers to a world of ports, session affinity, and utilisation impacts on infrastructure knowing they'd be accountable for it in production. Architecting cloud-native applications for scale remains a mystery to most developers today.
+But building repeatable, maintainable environments was hard. The toughest challenge? The federation of dev and ops knowledge. Pushing development teams to think beyond one-off batch scripts, deploying directly from their IDE, and app and infra security. The SRE movement transitioned developers to a world of ports, consideration of stateful and stateless architectures, and utilisation impacts on infrastructure knowing they'd be accountable for it in production. Architecting cloud-native applications for scale remains a mystery to most developers today.
 
 ## Serverless
 
